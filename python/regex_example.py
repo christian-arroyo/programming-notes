@@ -1,3 +1,5 @@
+# Regex to determine an IP address
+
 for line in out.split('\n'):
     # Only capture lines that have an IP address
     if re.search(r'[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}', line):
