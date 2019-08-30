@@ -1,1 +1,6 @@
-# Download SQLite
+# SQL code
+
+# Insert into a table
+
+# Join two tables together
+select Album.title, Album.artist_id, Artist.id, Artist.name from Album join Artist on Album.artist_id = Artist.id
