@@ -1,7 +1,7 @@
 import sqlite3
 
 # Make a connection to a database
-conn = sqlite3.connect('emaildb.sqlite')
+conn = sqlite3.connect('gsodb.sqlite')
 
 # Create a cursor from connection
 cur = conn.cursor()
