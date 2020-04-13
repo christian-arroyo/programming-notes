@@ -1,6 +1,6 @@
 def reverse_string(string):
     if type(string) != str:
-        print("k")
+        print("error")
     return string[::-1]
 
 def reverse_string2(string):

@@ -11,7 +11,7 @@ class Bst:
 
     def insert(self, value):
         new_node = Node(value)
-        if self.root = None:
+        if self.root == None:
             self.root = new_node
         else:
             cur_node = self.root
@@ -46,7 +46,6 @@ class Bst:
         return False
 
     # Was not able to finish it
-    
     # def remove(self, value):
     #     if self.root == None:
     #         return False
@@ -65,6 +64,6 @@ class Bst:
     #                 if parent_node
     #             # Option 2: Right child which doesn't have a left child
     #             # Option 3: Right child that has a left child
-
-        print("Error - remove - value does not exist in tree")
-        return False
+        #
+        # print("Error - remove - value does not exist in tree")
+        # return False

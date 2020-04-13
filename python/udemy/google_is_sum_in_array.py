@@ -14,7 +14,7 @@ sum = 6
 print(is_sum_in_array(array, sum))
 
 # for(i=0; i < array.length(); i++){
-#     for(j=i+1; j < arrlay.length(), j++){
+#     for(j=i+1; j < array.length(), j++){
 #         if(array[i] + array[j] == sum){
 #             return true
 #         }
