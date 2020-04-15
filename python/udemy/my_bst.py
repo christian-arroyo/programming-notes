@@ -33,37 +33,55 @@ class Bst:
 
     # return True if element exists, false otherwise
     def lookup(self, value):
-        if self.root == None:
-            return False
         cur_node = self.root
-        while cur_node:
-            if cur_node.value < value:
-                cur_node = cur_node.left
-            elif cur_node.value > value:
-                cur_node = cur_node.right
-            elif cur_node.value == value:
+        while True:
+            if cur_node == None:
+                return False
+            if cur_node.value == value:
                 return True
-        return False
+            elif value < cur_node.value:
+                cur_node = cur_node.left
+            else:
+                cur_node = cur_node.right
 
-    # Was not able to finish it
-    # def remove(self, value):
-    #     if self.root == None:
-    #         return False
-    #     cur_node = self.root
-    #     while cur_node:
-    #         if cur_node.value < value:
-    #             parent_node = cur_node
-    #             cur_node.left = cur_node
-    #         elif cur_node.value > value:
-    #             parent_node = cur_node
-    #             cur_node.right = cur_node
-    #         # Found node in the list
-    #         elif cur_node.value == value:
-    #             # Option 1: No right child
-    #             if cur_node.right == None:
-    #                 if parent_node
-    #             # Option 2: Right child which doesn't have a left child
-    #             # Option 3: Right child that has a left child
-        #
-        # print("Error - remove - value does not exist in tree")
-        # return False
+    def print_tree(self):
+        self.printt(self.root)
+
+    def printt(self, cur_node):
+        if cur_node != None:
+            self.printt(cur_node.left)
+            print(str(cur_node.value))
+            self.printt(cur_node.right)
+
+    # Will give you output of numbers in BFS order
+    def breadth_first_search(self):
+        cur_node = self.root
+        answer = []
+        level_queue = []
+        level_queue.append(cur_node)
+
+        while len(level_queue) > 0:
+            cur_node = level_queue[0]
+            print(cur_node.value)
+            del level_queue[0]
+            answer.append(cur_node)
+            if cur_node.left:
+                level_queue.append(cur_node.left)
+            if cur_node.right:
+                level_queue.append(cur_node.right)
+
+    # def breadth_first_search_recursive(self, queue, list):
+
+
+
+bst = Bst()
+bst.insert(10)
+bst.insert(5)
+bst.insert(6)
+bst.insert(12)
+bst.insert(8)
+print(bst.lookup(6))
+print(bst.lookup(12))
+print(bst.lookup(7))
+# bst.print_tree()
+bst.breadth_first_search()
