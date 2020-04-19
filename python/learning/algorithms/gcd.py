@@ -9,4 +9,14 @@ def gcd(a, b):
         divisor = remainder
     return dividend
 
-print(gcd(40, 50))
+def find_gcd(x, y):
+    while(y):
+        x, y = y, x % y
+    return x
+
+# def find_gcd_list
+
+x=21
+y=22
+# print(gcd(x, y))
+print(find_gcd(x,y))

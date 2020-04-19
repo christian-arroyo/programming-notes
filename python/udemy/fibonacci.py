@@ -16,5 +16,17 @@ def fib_recursive(n):
         return n
     return fib_recursive(n-1) + fib_recursive(n-2)
 
-print(fib_iterative(1))
-print(fib_recursive(8))
+# Fast, O(n)
+def fib_recursive_dynamic(n, cache):
+    if n < 2:
+        return n
+    if n in cache:
+        return cache[n]
+    else:
+        cache[n] = fib_recursive_dynamic(n-1, cache) + fib_recursive_dynamic(n-2, cache)
+        return cache[n]
+
+
+# print(fib_iterative(10))
+print(fib_recursive(20))
+print(fib_recursive_dynamic(20, {}))

@@ -70,18 +70,76 @@ class Bst:
             if cur_node.right:
                 level_queue.append(cur_node.right)
 
-    # def breadth_first_search_recursive(self, queue, list):
+    # Will give you output of numbers in BFS order, recursively
+    def breadth_first_search_recursive(self, queue, list):
+        if len(queue) == 0:
+            return list
+        cur_node = queue[0]
+        print(cur_node.value)
+        del queue[0]
+        list.append(cur_node)
+        if cur_node.left:
+            queue.append(cur_node.left)
+        if cur_node.right:
+            queue.append(cur_node.right)
+        return self.breadth_first_search_recursive(queue, list)
+
+    def dfs_in_order(self):
+        return self.traverse_in_order(self.root, [])
+
+    def traverse_in_order(self, node, answers):
+        if node.left:
+            self.traverse_in_order(node.left, answers)
+        answers.append(node.value)
+        if node.right:
+            self.traverse_in_order(node.right,answers)
+        return answers
+
+    def dfs_pre_order(self):
+        return self.traverse_pre_order(self.root, [])
+
+    def traverse_pre_order(self, node, answers):
+        answers.append(node.value)
+        if node.left:
+            self.traverse_pre_order(node.left, answers)
+        if node.right:
+            self.traverse_pre_order(node.right, answers)
+        return answers
+
+    def dfs_post_order(self):
+        return self.traverse_post_order(self.root, [])
+
+    def traverse_post_order(self, node, answers):
+        if node.left:
+            self.traverse_post_order(node.left, answers)
+        if node.right:
+            self.traverse_post_order(node.right, answers)
+        answers.append(node.value)
+        return answers
 
 
 
-bst = Bst()
-bst.insert(10)
-bst.insert(5)
-bst.insert(6)
-bst.insert(12)
-bst.insert(8)
-print(bst.lookup(6))
-print(bst.lookup(12))
-print(bst.lookup(7))
-# bst.print_tree()
-bst.breadth_first_search()
+#     9
+#   4    20
+# 1  6 15  170
+# inorder - [1,4 6,9,15,20,170]
+# preorder - [9,4,1,6,20,15,170]
+# postorder - [1,6,4,15,170,20,9]
+
+tree = Bst()
+tree.insert(9)
+tree.insert(4)
+tree.insert(6)
+tree.insert(20)
+tree.insert(170)
+tree.insert(15)
+tree.insert(1)
+
+# print(tree.lookup(12))
+# print(tree.lookup(7))
+# tree.print_tree()
+# tree.breadth_first_search()
+# tree.breadth_first_search_recursive([tree.root], [])
+print(tree.dfs_in_order())
+print(tree.dfs_pre_order())
+print(tree.dfs_post_order())
