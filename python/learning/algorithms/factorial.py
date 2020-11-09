@@ -10,4 +10,4 @@ def fact(n):
     return factorial
 
 
-print(fact(4))
+print(fact(80))

@@ -31,12 +31,23 @@ class Bst:
     def print_tree(self):
         if self.root != None:
             self._print_tree(self.root)
-
     def _print_tree(self, cur_node):
         if cur_node != None:
             self._print_tree(cur_node.left_child)
             print(str(cur_node.value))
             self._print_tree(cur_node.right_child)
+
+    def height(self):
+        if self.root == None:
+            return 0
+        else:
+            return self._height(self.root)
+
+    def _height(self, node):
+        if node == None:
+            return 0
+        return max(self._height(node.left_child), self._height(node.right_child) +1)
+
 
 def fill_tree(tree, num_elems=100, max_int=1000):
     from random import randint
@@ -45,6 +56,16 @@ def fill_tree(tree, num_elems=100, max_int=1000):
         tree.insert(cur_elem)
     return tree
 
+
 tree = Bst()
-tree = fill_tree(tree)
+# tree = fill_tree(tree)
+# tree.print_tree()
+tree.insert(9)
+tree.insert(4)
+tree.insert(6)
+tree.insert(20)
+tree.insert(170)
+tree.insert(15)
+tree.insert(1)
 tree.print_tree()
+# print(tree.height())
