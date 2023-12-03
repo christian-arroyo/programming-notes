@@ -21,7 +21,7 @@ class DoublyLinkedList:
             temp = temp.next
         print("")
 
-    def append(self, value):
+    def append(self, value) -> bool:
         new_node = Node(value)
         if self.head is None:
             self.tail = self.head = new_node
@@ -45,7 +45,7 @@ class DoublyLinkedList:
         self.length -= 1
         return temp
     
-    def prepend(self, value):
+    def prepend(self, value) -> bool:
         new_node = Node(value)
         if self.length == 0:
             self.head = self.tail = new_node
@@ -88,7 +88,42 @@ class DoublyLinkedList:
             cur.value = value
             return True
         return False
-
+    
+    def insert(self, index,  value) -> bool:
+        if index < 0 or index > self.length:
+            return False
+        if index == 0:
+            return self.prepend(value)
+        elif index == self.length:
+            self.append(value)
+        else:
+            new_node = Node(value)
+            before  = self.get(index - 1)
+            after = before.next
+            new_node.prev = before
+            new_node.next = after
+            before.next = new_node
+            after.prev = new_node
+            self.length += 1
+            return True
+    
+    def remove(self, index) -> Optional[Node]:
+        if index < 0 or index >= self.length:
+            return False
+        if index == 0:
+            return self.pop_first()
+        elif index == self.length -1:
+            return self.pop()
+        else:
+            node = self.get(index)
+            before = node.prev
+            after = node.next
+            before.next = after
+            after.prev = before
+            node.next = node.prev = None
+            self.length -= 1
+            return node
+        
 
 my_doubly_linked_list = DoublyLinkedList(0)
 my_doubly_linked_list.append(1)
@@ -101,4 +136,8 @@ my_doubly_linked_list.print_list()
 my_doubly_linked_list.pop_first()
 my_doubly_linked_list.print_list()
 print(my_doubly_linked_list.get(1).value)
+my_doubly_linked_list.insert(-1, 5)
+my_doubly_linked_list.print_list()
+my_doubly_linked_list.remove(1)
+my_doubly_linked_list.print_list()
 
