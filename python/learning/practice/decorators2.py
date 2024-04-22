@@ -1,6 +1,7 @@
 import functools
 import time
 
+
 def timer(func):
     """Print the runtime of the decorated function"""
     @functools.wraps(func)
@@ -18,6 +19,7 @@ def timer(func):
 def waste_some_time(num_times):
     for _ in range(num_times):
         sum([number**2 for number in range(10000)])
+
 
 waste_some_time(1)
 waste_some_time(999)
