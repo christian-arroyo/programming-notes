@@ -1,4 +1,6 @@
 import math
+from typing import List
+
 
 def minEatingSpeed(self, piles: List[int], h: int) -> int:
     right = max(piles)
@@ -9,7 +11,7 @@ def minEatingSpeed(self, piles: List[int], h: int) -> int:
         mid = (left + right) // 2
         hours_taken = 0
         for pile in piles:
-            hours_taken += math.ceil(pile/mid)
+            hours_taken += math.ceil(pile / mid)
         if hours_taken < h:
             right = mid - 1
         elif hours_taken > h:

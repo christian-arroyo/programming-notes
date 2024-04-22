@@ -1,6 +1,4 @@
-from typing import List
-
-def topKFrequent(nums: List[int], k: int) -> List[int]:
+def topKFrequent(nums: list[int], k: int) -> list[int]:
     map_count = {}
     count_list = [[] for _ in range(len(nums) + 1)]
     solution = []
@@ -22,6 +20,6 @@ def topKFrequent(nums: List[int], k: int) -> List[int]:
             index -= 1
     return solution
 
-lst = [1,1,1,2,2,3]
-print(topKFrequent(lst, 2))
 
+lst = [1, 1, 1, 2, 2, 3]
+print(topKFrequent(lst, 2))

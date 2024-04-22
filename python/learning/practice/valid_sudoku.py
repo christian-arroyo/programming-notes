@@ -38,10 +38,9 @@ def isValidSudoku(board: List[List[str]]) -> bool:
     
     # Check that all columns are valid
     for column_number in range(0, 9):
-            result = is_column_valid(column_number, board)
-            print(result)
-            if not is_column_valid(column_number, board):
-                return False
+        result = is_column_valid(column_number, board)
+        if not is_column_valid(column_number, board):
+            return False
     
     # Check that all squares are valid
     for i in range(0, 9, 3):
@@ -54,4 +53,4 @@ def isValidSudoku(board: List[List[str]]) -> bool:
 board_true = [["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
 board_false = [["8","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
 
-isValidSudoku(board_true)
+print(isValidSudoku(board_true))

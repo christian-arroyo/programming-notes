@@ -3,6 +3,7 @@ class Node:
         self.data = d
         self.next = None
 
+
 class Queue:
     def __init__(self):
         self.first = None
@@ -38,7 +39,7 @@ class Queue:
 
     def print_queue(self):
         cur_node = self.first
-        while(cur_node):
+        while (cur_node):
             print(cur_node.data, end=' ')
             cur_node = cur_node.next
 
