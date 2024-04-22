@@ -1,3 +1,5 @@
+import functools
+
 # A decorator wraps a function, modifying its behavior
 
 def print_hello(name):
@@ -14,18 +16,6 @@ def greet_Christian(func):
 print(greet_Christian(print_hello))
 print(greet_Christian(print_we_are_awesome))
 
-def parent():
-    print("Printing from parent")
-
-    def first_child():
-        print("Printing from first child")
-
-    def second_child():
-        print("Printing from second child")
-
-    second_child()
-    first_child()
-
 
 def decorator(func):
     """Takes a function and returns a function"""
@@ -35,8 +25,25 @@ def decorator(func):
         print("Something is happening after the function is called.")
     return wrapper
 
+@decorator
 def say_whee():
     print("Whee!")
 
-say_whee = decorator(say_whee)
 say_whee()
+
+
+# Decorator with arguments
+def do_twice(func):
+    # this line allows the wrapped function to preserve its identity
+    @functools.wraps(func)
+    def wrapper_do_twice(*args, **kwargs):
+        func(*args, **kwargs)
+        func(*args, **kwargs)
+    return wrapper_do_twice
+
+@do_twice
+def say_whoo_to_person(name):
+    print(f"Hey {name}, whoooooo!")
+
+say_whoo_to_person("Christian")
+say_whoo_to_person("Chuy")
