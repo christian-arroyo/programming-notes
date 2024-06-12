@@ -10,8 +10,7 @@ def is_valid_ipv4_address(ip_address: str) -> tuple:
         except ValueError:
             return False, "ip dotted-quad components not all integers: {ip_address}"
         if num < 0 or num > 255:
-            return False, f"ip dotted-quad component not between 0 and 255: {
-                ip_address}"
+            return False, f"ip dotted-quad component not between 0 and 255: {ip_address}"
     return True, ""
 
 

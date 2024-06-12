@@ -73,7 +73,7 @@ if scan_type == 'agent-pull':
         if response.status_code != 200:
             raise Exception('non-200 status code: %d' % response.status_code)
         data = json.loads(response.text)
-        agent_url = '%s/api/2.0/status' % data['agenturl']
+        agent_url = f'{agent_url}/api/2.0/status' % data['agenturl']
         response = requests.get(agent_url)
         retries = 0
         while response.status_code == 503:

@@ -2,6 +2,7 @@ def fibonacci(n):
     array = [None] * (n+1)
     return _fibonacci(n, array)
 
+
 def _fibonacci(n, array):
     # 1 1 2 3 5 8 13 21
     # If item exists in array, return it
