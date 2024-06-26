@@ -1,0 +1,59 @@
+What is Kubernetes, and what are its key features?
+Answer: Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. Its key features include automatic container placement, scaling, load balancing, and self-healing capabilities.
+
+What are containers, and how does Kubernetes manage them?
+Answer: Containers are lightweight, portable, and isolated environments that package applications and their dependencies. Kubernetes manages containers by orchestrating their deployment across a cluster of nodes, ensuring efficient resource utilization and scalability.
+
+How does Kubernetes differ from Docker?
+Answer: Docker is a platform for developing, shipping, and running applications in containers, while Kubernetes focuses on orchestrating containerized applications across multiple hosts. Kubernetes can manage Docker containers but is not limited to Docker as it supports other container runtimes.
+
+What are Pods in Kubernetes?
+Answer: Pods are the smallest deployable units in Kubernetes that encapsulate one or more containers with shared storage and network resources. They are scheduled and run on nodes, allowing containers within the same Pod to communicate with each other using localhost.
+
+Explain the concept of Kubernetes Nodes.
+Answer: Kubernetes Nodes are individual machines (virtual or physical) within a cluster that run applications and workloads. Each Node runs services necessary to manage containers, such as the Kubelet for communication with the Kubernetes Master and container runtime (e.g., Docker).
+
+What is a Kubernetes Service, and why is it used?
+Answer: A Kubernetes Service is an abstraction that defines a logical set of Pods and a policy for accessing them. It provides a stable endpoint (IP address and port) for accessing a set of Pods, enabling load balancing and service discovery within the cluster.
+
+How does Kubernetes manage application scalability?
+Answer: Kubernetes manages application scalability through Horizontal Pod Autoscaling (HPA) and Cluster Autoscaler. HPA automatically adjusts the number of Pods in a Deployment based on CPU utilization or custom metrics. Cluster Autoscaler scales the number of Nodes in a cluster based on resource demands.
+
+What is a Kubernetes Deployment, and how does it work?
+Answer: A Kubernetes Deployment is a resource object that manages the lifecycle and scaling of Pods. It allows you to declaratively define a desired state for Pods, handles deployment updates, and provides rollback capabilities in case of failures.
+
+Describe the role of Kubernetes ConfigMaps and Secrets.
+Answer: Kubernetes ConfigMaps store configuration data as key-value pairs or files, which can be injected into Pods as environment variables or mounted volumes. Secrets store sensitive information such as passwords or API tokens securely, ensuring confidentiality and access control.
+
+How does Kubernetes handle storage for containerized applications?
+Answer: Kubernetes manages storage through Persistent Volumes (PVs) and Persistent Volume Claims (PVCs). PVs are storage resources provisioned by administrators, while PVCs are requests made by users for storage. Kubernetes dynamically provisions PVs based on PVC requests and attaches them to Pods.
+
+Explain the concept of Kubernetes Operators.
+Answer: Kubernetes Operators are applications-specific controllers that extend Kubernetes' capabilities to manage complex stateful applications. They automate tasks related to deployment, scaling, backup, and recovery, applying domain-specific knowledge to maintain application health and reliability.
+
+What is Kubernetes Network Policies, and how are they used?
+Answer: Kubernetes Network Policies are specifications that define how Pods communicate with each other and other network endpoints. They enforce rules for ingress (incoming traffic) and egress (outgoing traffic), providing security and isolation within the cluster.
+
+How do you troubleshoot a Kubernetes cluster?
+Answer: Troubleshooting Kubernetes involves checking cluster health using commands like kubectl get nodes, inspecting Pod status with kubectl get pods, reviewing events with kubectl describe, examining logs with kubectl logs, and using monitoring tools like Prometheus and Grafana for performance metrics.
+
+What are StatefulSets in Kubernetes, and when are they used?
+Answer: StatefulSets are Kubernetes controllers used to manage stateful applications that require stable, unique network identifiers and stable storage. They provide guarantees about the ordering and uniqueness of Pods, enabling operations like scaling and rolling updates without disrupting application state.
+
+How does Kubernetes manage application upgrades and rollbacks?
+Answer: Kubernetes manages application upgrades and rollbacks using Deployments. It performs rolling updates by gradually replacing old Pods with new ones, ensuring zero downtime. In case of failures, Kubernetes automatically rolls back to the previous stable version based on defined rollback policies.
+
+What are Kubernetes RBAC (Role-Based Access Control) and how do they enhance cluster security?
+Answer: Kubernetes RBAC is a security model that defines permissions and access rights based on roles and role bindings. It restricts users' actions within the cluster, ensuring least privilege access and enforcing security policies to protect cluster resources.
+
+How do you secure Kubernetes Secrets?
+Answer: Kubernetes Secrets are stored encrypted at rest and are only accessible to Pods with the appropriate permissions. To enhance security, best practices include using secrets in environment variables rather than mounting them as volumes, rotating secrets regularly, and restricting access using RBAC.
+
+What are some best practices for managing Kubernetes cluster resources?
+Answer: Best practices include defining resource requests and limits for Pods, using namespaces for resource isolation, implementing health checks (liveness and readiness probes), enabling logging and monitoring, and regularly updating Kubernetes components and node operating systems.
+
+How would you approach designing a Kubernetes architecture for a highly available, production-grade application?
+Answer: I would design a Kubernetes architecture with multiple nodes spread across availability zones for fault tolerance, implement Kubernetes Services for load balancing and service discovery, use Persistent Volumes for data persistence, employ auto-scaling for elasticity, and implement disaster recovery strategies like backups and replicas.
+
+What challenges have you faced in deploying Kubernetes in a production environment, and how did you overcome them?
+Answer: I faced challenges such as managing cluster networking, optimizing resource utilization, ensuring high availability and reliability, and integrating with existing infrastructure. I overcame these challenges by carefully planning cluster architecture, leveraging Kubernetes networking solutions like Calico or Flannel, implementing monitoring and alerting, and collaborating closely with teams to address operational issues.

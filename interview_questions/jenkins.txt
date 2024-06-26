@@ -1,0 +1,59 @@
+What is Jenkins?
+Answer: Jenkins is an open-source automation server used to automate tasks related to building, testing, and deploying software. It supports various plugins to integrate with other tools and services.
+
+How does Jenkins support CI/CD?
+Answer: Jenkins supports CI/CD by allowing developers to define build pipelines through configuration files or its web interface. It automates the process of integrating code changes, running tests, and deploying applications.
+
+What is a Jenkins pipeline?
+Answer: A Jenkins pipeline is a suite of plugins that supports implementing and integrating continuous delivery pipelines into Jenkins. Pipelines are defined using a domain-specific language (DSL) called Groovy.
+
+What are the two types of Jenkins pipelines?
+Answer: The two types are Declarative Pipeline and Scripted Pipeline. Declarative Pipeline provides a simplified and more structured syntax, while Scripted Pipeline offers more flexibility and is written in Groovy code.
+
+Explain the Jenkinsfile.
+Answer: A Jenkinsfile is a text file that contains the definition of a Jenkins pipeline. It can be written in either Declarative or Scripted syntax and is typically stored in the root directory of the source code repository.
+
+What are Jenkins agents and nodes?
+Answer: In Jenkins, a node is a machine where Jenkins runs, and an agent is a single instance of a machine that runs a Jenkins build. The master node is responsible for managing agents and dispatching build jobs to them.
+
+How can you secure Jenkins?
+Answer: Jenkins can be secured by implementing user authentication, authorization, using security plugins, enabling HTTPS, securing the Jenkins instance with firewalls, and regularly updating Jenkins and its plugins.
+
+What is a Jenkins plugin?
+Answer: A Jenkins plugin is an extension that adds functionality to Jenkins. Plugins can integrate Jenkins with other tools, add new features, or modify existing features.
+
+How do you back up Jenkins?
+Answer: Backing up Jenkins involves copying the JENKINS_HOME directory, which contains all the configuration files, build logs, and plugin data. This can be automated using plugins like ThinBackup or manually through file system operations.
+
+Describe a scenario where you had to troubleshoot a failing Jenkins job.
+Answer: In a typical troubleshooting scenario, you would first check the job's console output for error messages, review the job configuration for any misconfigurations, verify the status of the Jenkins agent, check for any recent changes to the code or environment, and ensure that all dependencies are correctly installed and configured.
+
+What is a Jenkins job?
+Answer: A Jenkins job is a task or a set of tasks that Jenkins performs, such as building software, running tests, or deploying an application. Jobs can be manually triggered, scheduled, or triggered by events like code commits.
+
+How do you configure a Jenkins job to run periodically?
+Answer: You can configure a Jenkins job to run periodically using the "Build periodically" option in the job configuration. This uses a cron-like syntax to define the schedule.
+
+What is the purpose of the Jenkins workspace?
+Answer: The Jenkins workspace is a directory on the Jenkins agent where the source code is checked out and where the build and test processes are executed. Each job has its own workspace directory.
+
+What is Jenkins Pipeline as Code?
+Answer: Pipeline as Code refers to defining the entire build and deployment process in code (Jenkinsfile) and storing it in the source code repository. This approach promotes version control, code review, and collaboration on the pipeline itself.
+
+How can you trigger a Jenkins job from a Git repository?
+Answer: A Jenkins job can be triggered from a Git repository using webhooks. When a change is pushed to the repository, the webhook sends a notification to Jenkins to start the job. Alternatively, Jenkins can poll the repository at regular intervals to check for changes.
+
+What is the Jenkins Blue Ocean plugin?
+Answer: Jenkins Blue Ocean is a plugin that provides a modern and user-friendly interface for Jenkins. It visualizes pipelines and makes it easier to navigate and manage jobs and builds.
+
+How do you manage and scale Jenkins for a large team?
+Answer: Managing and scaling Jenkins for a large team can be achieved by using a distributed build architecture with multiple agents, using containerization (e.g., Kubernetes) to manage Jenkins instances, implementing proper job and resource management, and using Jenkins Operations Center for centralized management.
+
+What is the purpose of a Jenkins shared library?
+Answer: A Jenkins shared library is a reusable collection of Groovy scripts that can be shared across multiple Jenkins pipelines. It helps to avoid duplication and promotes consistency and maintainability of pipeline code.
+
+How do you handle secrets and credentials in Jenkins?
+Answer: Secrets and credentials can be securely managed in Jenkins using the Credentials plugin. This allows storing sensitive information like passwords, API keys, and SSH keys, which can be accessed by jobs without exposing them in plain text.
+
+What are some common issues you might encounter with Jenkins, and how do you troubleshoot them?
+Answer: Common issues include build failures, performance bottlenecks, agent connectivity issues, and plugin conflicts. Troubleshooting involves checking job logs, verifying agent status, monitoring resource usage, reviewing recent changes, and consulting Jenkins and plugin documentation.

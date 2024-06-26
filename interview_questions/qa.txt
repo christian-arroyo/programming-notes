@@ -1,0 +1,61 @@
+What is the role of a QA engineer in a software development team?
+Answer: The role of a QA engineer is to ensure that the software product meets the required standards of quality before it is released to the public. This includes writing and executing test plans, identifying and documenting bugs, and working with developers to resolve issues.
+
+What are the different types of testing you are familiar with?
+Answer: Different types of testing include unit testing, integration testing, system testing, acceptance testing, performance testing, load testing, stress testing, regression testing, and usability testing.
+
+What is the difference between manual testing and automated testing?
+Answer: Manual testing involves executing test cases manually without the use of any automation tools, while automated testing uses tools and scripts to execute test cases.
+
+What is a test case, and what are its components?
+Answer: A test case is a set of conditions or variables under which a tester will determine whether a system under test satisfies requirements and works correctly. Components include test case ID, test description, preconditions, test steps, expected results, and actual results.
+
+What is a test plan, and what does it typically include?
+Answer: A test plan is a document detailing the objectives, resources, and processes for a specific test for a software or hardware product. It includes the scope, approach, resources, schedule, and deliverables of the testing activities.
+
+What is regression testing, and why is it important?
+Answer: Regression testing involves re-running previously completed tests to ensure that new changes haven't adversely affected existing functionality. It is important because it helps catch bugs that might have been introduced inadvertently by recent changes.
+
+Explain the difference between a bug, defect, and error.
+Answer: An error is a mistake in the code written by a developer. A defect is a deviation from the expected behavior found during testing. A bug is a subset of defects, specifically a fault in the software that causes incorrect or unexpected results.
+
+What is the significance of the bug life cycle?
+Answer: The bug life cycle is the sequence of states that a bug goes through from identification to resolution. It helps track the status of a bug and ensures that it is properly addressed and resolved.
+
+What is exploratory testing, and when is it used?
+Answer: Exploratory testing is an approach where testers actively explore the application without predefined test cases, learning about the system as they test. It is used when there are time constraints or insufficient documentation.
+
+What is the difference between black-box testing and white-box testing?
+Answer: Black-box testing evaluates the functionality of the application without looking at the internal code structure. White-box testing involves testing the internal logic and structure of the code.
+
+How do you prioritize test cases in a test suite?
+Answer: Test cases are prioritized based on factors like risk, criticality of functionality, user impact, frequency of use, and recent changes to the code. High-risk and high-impact areas are tested first.
+
+What are some common test automation tools you have used?
+Answer: Common test automation tools include Selenium, QTP/UFT, TestComplete, JUnit, TestNG, Appium, and JMeter.
+
+How do you handle flaky tests in your test automation suite?
+Answer: Flaky tests can be handled by identifying and isolating the cause, improving the stability of the test environment, adding waits or retries, and improving the test design to be more robust against variations.
+
+What is a test coverage metric, and why is it important?
+Answer: Test coverage measures the extent to which the source code is tested by the test suite. It is important because it helps ensure that all parts of the application are tested and identifies untested parts of the code.
+
+How do you ensure your tests are maintainable and scalable?
+Answer: Ensuring tests are maintainable and scalable involves writing clear and reusable test code, organizing tests logically, using data-driven tests, regularly refactoring test code, and implementing continuous integration for frequent feedback.
+
+Describe a time when you found a critical bug late in the development cycle. How did you handle it?
+Answer: Once I found a critical bug just before the release. I immediately reported it to the development team and provided detailed steps to reproduce it. We held a quick meeting to assess the impact, prioritized fixing it, and delayed the release until the bug was resolved and thoroughly retested.
+
+How do you collaborate with developers to resolve issues?
+Answer: Collaboration with developers involves clear communication, providing detailed bug reports with steps to reproduce, working together to understand the issue, suggesting possible solutions, and verifying fixes promptly.
+
+How do you handle situations where the development team disagrees with your bug report?
+Answer: In such situations, I present evidence and demonstrate the bug with examples and logs. I listen to their perspective and work collaboratively to understand the issue. If necessary, I escalate it to the project manager or product owner for further discussion.
+
+What steps do you take to stay updated with the latest testing tools and techniques?
+Answer: I stay updated by reading industry blogs, attending webinars and conferences, participating in online forums, taking courses, and experimenting with new tools and methodologies in personal projects.
+
+How do you test an application when there is minimal documentation?
+Answer: I perform exploratory testing to understand the application’s functionality, collaborate with stakeholders to gather information, create test cases based on the discovered behavior, and document my findings to build a knowledge base for future testing.
+
+These questions and answers should help you prepare for a QA software engineer interview, covering a range of topics from basic concepts to advanced scenarios and situational questions.

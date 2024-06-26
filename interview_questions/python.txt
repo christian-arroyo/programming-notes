@@ -1,0 +1,106 @@
+What is Python?
+Answer: Python is a high-level, interpreted programming language known for its readability, simplicity, and flexibility. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.
+
+What are Python’s key features?
+Answer: Key features include easy-to-read syntax, dynamic typing, automatic memory management, a large standard library, and support for multiple programming paradigms.
+
+What is PEP 8, and why is it important?
+Answer: PEP 8 is the Python Enhancement Proposal that provides guidelines for writing clean and readable code in Python. It helps maintain consistency across Python codebases.
+
+How do you declare a variable in Python?
+Answer: Variables in Python are declared by simply assigning a value to a name using the = operator. For example, x = 10.
+
+What are lists and tuples in Python?
+Answer: Lists are mutable sequences of elements, defined using square brackets, e.g., my_list = [1, 2, 3]. Tuples are immutable sequences of elements, defined using parentheses, e.g., my_tuple = (1, 2, 3).
+
+What is a Python dictionary?
+Answer: A dictionary is a collection of key-value pairs, defined using curly braces, e.g., my_dict = {'key1': 'value1', 'key2': 'value2'}. Dictionaries are unordered, mutable, and indexed by keys.
+
+What are list comprehensions, and provide an example?
+Answer: List comprehensions provide a concise way to create lists. For example, [x**2 for x in range(10)] generates a list of squares from 0 to 9.
+
+Explain the difference between append() and extend() methods in a list.
+Answer: append() adds a single element to the end of the list, e.g., my_list.append(4). extend() adds multiple elements from an iterable to the end of the list, e.g., my_list.extend([4, 5, 6]).
+
+What is a lambda function? Provide an example.
+Answer: A lambda function is an anonymous, inline function defined with the lambda keyword. Example: square = lambda x: x**2.
+
+What is the difference between *args and **kwargs?
+Answer: *args is used to pass a variable number of positional arguments to a function, while **kwargs is used to pass a variable number of keyword arguments.
+
+Explain the concept of decorators in Python.
+Answer: Decorators are functions that modify the behavior of another function or method. They are used with the @decorator_name syntax above the function definition.
+
+What is the Global Interpreter Lock (GIL)?
+Answer: The GIL is a mutex that protects access to Python objects, preventing multiple native threads from executing Python bytecodes at once. It ensures thread safety but can be a bottleneck in CPU-bound multithreaded programs.
+
+What is the difference between deepcopy and copy?
+Answer: copy.copy() creates a shallow copy of an object, copying only the object's references. copy.deepcopy() creates a deep copy, copying the object and all objects nested within it.
+
+What are generators in Python?
+Answer: Generators are functions that return an iterable set of items, one at a time, using the yield statement. They are more memory-efficient than lists for large datasets.
+
+Explain context managers and the with statement.
+Answer: Context managers allow setup and cleanup actions to be taken around a block of code, typically using the with statement. Example: with open('file.txt', 'r') as file: ensures the file is properly closed after reading.
+
+What are metaclasses in Python?
+Answer: Metaclasses are classes of classes that define how classes behave. A class is an instance of a metaclass. Metaclasses allow customization of class creation.
+
+How do you handle exceptions in Python?
+Answer: Exceptions are handled using try-except blocks. For example:
+
+Copy code
+try:
+    result = 10 / 0
+except ZeroDivisionError as e:
+    print(f"Error: {e}")
+
+What is the purpose of the __init__.py file in a Python package?
+Answer: The __init__.py file marks a directory as a Python package and can be used to execute package initialization code or define the __all__ variable to control what is imported when the package is imported.
+
+Explain the difference between staticmethod and classmethod.
+Answer: @staticmethod defines a method that does not operate on an instance or class. @classmethod defines a method that takes the class as its first parameter. Example:
+
+class MyClass:
+    @staticmethod
+    def static_method():
+        pass
+    
+    @classmethod
+    def class_method(cls):
+        pass
+What is the purpose of the super() function?
+
+Answer: The super() function is used to call a method from the parent class. It allows for method overriding and extension in subclasses.
+Practical Questions
+How do you read and write files in Python?
+
+Answer: Use the open() function with appropriate modes. Example for reading:
+
+with open('file.txt', 'r') as file:
+    content = file.read()
+Example for writing:
+
+with open('file.txt', 'w') as file:
+    file.write('Hello, World!')
+
+What is the difference between __str__ and __repr__ methods?
+Answer: __str__ provides a human-readable string representation of an object, used by print(). __repr__ provides an unambiguous string representation, used by repr() and should be a valid Python expression.
+
+How do you install and manage packages in Python?
+Answer: Use pip, the package installer for Python, to install and manage packages. Example: pip install requests.
+
+What are Python’s built-in data structures?
+Answer: Python's built-in data structures include lists, tuples, sets, and dictionaries.
+
+How do you perform unit testing in Python?
+Answer: Use the unittest module. Example:
+
+import unittest
+
+class TestMathOperations(unittest.TestCase):
+    def test_addition(self):
+        self.assertEqual(1 + 1, 2)
+
+if __name__ == '__main__':
+    unittest.main()

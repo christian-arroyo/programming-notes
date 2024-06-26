@@ -1,0 +1,44 @@
+What is Perforce Helix Core?
+Answer: Perforce Helix Core is a version control system that manages changes to source code and other digital assets. It supports branching, merging, and other source control operations for teams of any size.
+
+How do you check out a file in Perforce?
+Answer: To check out a file in Perforce, you use the p4 edit command. This makes the file writable and opens it for editing in the client workspace.
+
+What is a changelist in Perforce?
+Answer: A changelist in Perforce is a set of changes that can be submitted together as a single transaction. Each changelist is assigned a unique number and can include file additions, deletions, and modifications.
+
+What is the difference between a depot and a workspace in Perforce?
+Answer: A depot is a storage location on the Perforce server where all files are stored. A workspace, also known as a client, is a local copy of a portion of the depot that a user works with on their machine.
+
+How do you submit changes to the depot in Perforce?
+Answer: To submit changes to the depot, you use the p4 submit command. This uploads the changes from your workspace to the depot and creates a new changelist.
+
+What are the different types of branches in Perforce?
+Answer: Perforce supports two types of branches: classic (manual) branches and streams (stream-based branches). Classic branches are created using labels and workspace views, while streams provide more structured branching and merging capabilities.
+
+How do you merge changes between branches in Perforce?
+Answer: To merge changes between branches, you use the p4 integrate command to schedule integrations, followed by p4 resolve to resolve any conflicts, and finally p4 submit to submit the merged changes.
+
+What is a stream in Perforce, and how does it differ from a classic branch?
+Answer: A stream is a structured branch that defines a set of rules for inheritance, merging, and branching. Streams provide a more organized and efficient way to manage branches compared to classic branches.
+
+How do you revert changes in Perforce?
+Answer: To revert changes, you use the p4 revert command. This discards any changes made to the files and reverts them to their last synced state in the workspace.
+
+How do you handle file conflicts in Perforce?
+Answer: File conflicts in Perforce are resolved using the p4 resolve command. This command provides options to accept your changes, the other user’s changes, merge changes, or manually edit the files to resolve conflicts.
+
+What is the purpose of the p4 sync command?
+Answer: The p4 sync command updates your workspace with the latest changes from the depot. It synchronizes the files in your workspace to the specified revisions.
+
+How do you create a new workspace in Perforce?
+Answer: To create a new workspace, use the p4 client command. This opens a text editor where you can define the workspace specifications, such as the workspace name, root directory, and view mapping.
+
+What are labels in Perforce, and how are they used?
+Answer: Labels in Perforce are used to mark specific file revisions at a particular point in time. They can be used to tag releases, milestones, or any other significant state of the codebase.
+
+What is the p4 describe command used for?
+Answer: The p4 describe command provides detailed information about a specific changelist, including the list of affected files, diffs of changes, and any associated job fixes.
+
+How do you use the Perforce trigger mechanism?
+Answer: Perforce triggers are scripts or executables that are automatically invoked by the Perforce server in response to certain events, such as changelist submissions or user creations. Triggers can be configured in the Perforce server configuration file and are used to enforce policies, automate processes, or integrate with other systems.
