@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "https://github.com/christian-arroyo/programming-notes.git",
+            "request": "launch",
+            "url": "https://github.com/christian-arroyo/programming-notes.git"
+        }
+    ]
+}

@@ -1,0 +1,99 @@
+1. Java vs. JavaScript
+Question: What are the main differences between Java and JavaScript?
+Answer: Java is a statically-typed, object-oriented programming language used for building standalone applications, server-side applications, and Android apps. It requires a Java Development Kit (JDK) to compile and run. JavaScript is a dynamically-typed, interpreted language primarily used for web development, often running in the browser. It’s used to add interactivity to web pages and can also be used server-side with Node.js.
+
+2. Troubleshooting Java Applications
+Question: How would you troubleshoot a Java application that is running slowly?
+Answer: First, I would monitor the application’s resource usage (CPU, memory) using tools like JVisualVM or JConsole. Then, I’d check the logs for any exceptions or errors. Profiling the application can also help identify bottlenecks in the code. Reviewing the garbage collection logs might reveal memory management issues. Finally, I’d ensure that the application is optimized for the server’s configuration.
+
+3. Handling JavaScript Errors
+Question: How do you debug JavaScript errors in a web application?
+Answer: I use browser developer tools (e.g., Chrome DevTools) to inspect the console for error messages. I’ll set breakpoints to pause code execution and examine the state of variables at different points. I also use console.log statements to output variable values and execution paths. If necessary, I’ll check the network tab to ensure resources are loading correctly and examine the DOM to verify that elements are as expected.
+
+4. Java Exception Handling
+Question: What are checked and unchecked exceptions in Java? How do you handle them?
+Answer: Checked exceptions are exceptions that must be declared in a method's throws clause if the method can throw them, e.g., IOException. They’re checked at compile-time. Unchecked exceptions, like NullPointerException, are not checked at compile-time and are usually programming errors. I handle checked exceptions using try-catch blocks or by throwing them up the call stack. Unchecked exceptions are usually handled through validation or by catching them in a global exception handler.
+
+5. Asynchronous JavaScript
+Question: Explain how Promises work in JavaScript.
+Answer: Promises in JavaScript represent the eventual completion (or failure) of an asynchronous operation and its resulting value. A Promise can be in one of three states: pending, fulfilled, or rejected. We use .then() to handle the fulfilled state and .catch() for the rejected state. Promises allow us to write asynchronous code in a more manageable way compared to callback functions.
+
+6. Java Memory Management
+Question: How does Java manage memory, and how do you avoid memory leaks?
+Answer: Java manages memory using the heap, where objects are allocated, and the stack, which stores method frames and local variables. Garbage collection automatically reclaims memory from objects no longer in use. To avoid memory leaks, I ensure that objects are dereferenced when they are no longer needed, avoid circular references, and be cautious with static variables that can hold onto objects longer than necessary.
+
+7. Handling Cross-Browser JavaScript Issues
+Question: How do you ensure that your JavaScript code works across different browsers?
+Answer: I use feature detection libraries like Modernizr to check for browser capabilities. I also test the application in multiple browsers, using tools like BrowserStack or CrossBrowserTesting. Where necessary, I use polyfills to provide support for older browsers and follow best practices like avoiding deprecated features and using standard APIs.
+
+8. Concurrency in Java
+Question: How do you handle concurrency in Java applications?
+Answer: Java provides several mechanisms for handling concurrency, such as threads, synchronized blocks, and higher-level constructs from the java.util.concurrent package like ExecutorService, Locks, and Semaphore. I typically use ExecutorService for managing a pool of threads and synchronized or ReentrantLock for managing shared resources to avoid race conditions.
+
+9. JavaScript and DOM Manipulation
+Question: How would you manipulate the DOM using JavaScript?
+Answer: I can use methods like getElementById, getElementsByClassName, or querySelector to select elements. To change an element’s content, I’d modify the innerHTML or textContent properties. I can alter attributes using setAttribute or classList for class management. I’d also use event listeners like addEventListener to respond to user interactions.
+
+10. Monitoring Java Applications
+Question: What tools do you use to monitor and troubleshoot Java applications in production?
+Answer: I use tools like New Relic, AppDynamics, or Prometheus for monitoring performance metrics, identifying bottlenecks, and alerting on issues. I also utilize logging frameworks like Log4j or SLF4J to capture detailed logs, which help in diagnosing problems. For more in-depth troubleshooting, I might use thread dumps or heap dumps to analyze the state of the application.
+
+11. Java Collections Framework
+Question: Can you explain the difference between a HashMap and a Hashtable in Java?
+Answer: Both HashMap and Hashtable store key-value pairs, but HashMap is not synchronized, meaning it’s not thread-safe and is generally faster. Hashtable is synchronized, making it thread-safe but slower. Additionally, HashMap allows null keys and values, whereas Hashtable does not.
+
+12. JavaScript Event Handling
+Question: How would you explain event delegation in JavaScript?
+Answer: Event delegation is a technique where a single event handler is used to manage events for multiple child elements, by taking advantage of event bubbling. Instead of attaching individual event listeners to each child element, a listener is attached to a parent element, and the event is handled based on the target property, which indicates the origin of the event.
+
+13. Multithreading in Java
+Question: What are the differences between Thread and Runnable in Java?
+Answer: Thread is a class that represents a thread of execution, while Runnable is an interface that defines a single run() method that must be implemented. A class can extend Thread or implement Runnable to create a new thread, but implementing Runnable is preferred as it allows the class to extend other classes and better separates the task from the thread management.
+
+14. JavaScript Closures
+Question: What is a closure in JavaScript and how would you use it?
+Answer: A closure is a function that retains access to its lexical scope, even when the function is executed outside of that scope. This allows the function to "remember" the environment in which it was created. Closures are often used for creating private variables or functions, as well as for callback functions that need to access variables from an outer scope.
+
+15. Memory Leaks in JavaScript
+Question: How do you prevent memory leaks in JavaScript?
+Answer: To prevent memory leaks, I avoid creating unnecessary global variables, ensure that event listeners are removed when they are no longer needed, and avoid circular references between DOM elements and JavaScript objects. Also, I use tools like Chrome’s DevTools to identify and resolve memory leaks by checking for detached DOM nodes and tracking memory allocations over time.
+
+16. Java Generics
+Question: What are generics in Java, and why are they useful?
+Answer: Generics in Java allow you to define classes, interfaces, and methods with type parameters, providing compile-time type safety without the need to cast objects. They help catch type errors at compile time and enable code reusability by allowing the same code to work with different data types.
+
+17. JavaScript Promises vs. Async/Await
+Question: How does async/await differ from using Promises directly in JavaScript?
+Answer: async/await is a syntactic sugar built on top of Promises that makes asynchronous code look and behave more like synchronous code. async functions return a Promise, and await pauses the function execution until the Promise is resolved. This makes the code easier to read and maintain compared to chaining multiple .then() calls.
+
+18. Java String Pool
+Question: Can you explain the Java String pool?
+Answer: The Java String pool is a special memory region where Java stores string literals. When a string is created, the JVM checks the pool first: if the string already exists in the pool, it returns a reference to the existing string, otherwise, it adds the new string to the pool. This process helps save memory by avoiding the creation of duplicate strings.
+
+19. Cross-Origin Resource Sharing (CORS)
+Question: How do you handle CORS issues in JavaScript?
+Answer: CORS issues arise when making requests to a different domain from the one serving the web page. To handle CORS, I ensure that the server includes the necessary headers (Access-Control-Allow-Origin, Access-Control-Allow-Methods, etc.) in its response. On the client-side, I can use JSONP or a proxy server as workarounds, but configuring the server properly is the preferred solution.
+
+20. Java Annotations
+Question: What are annotations in Java, and how are they used?
+Answer: Annotations in Java provide metadata about the code, which can be used by the compiler or at runtime by frameworks. Common annotations include @Override, which indicates that a method overrides a method in a superclass, and @Deprecated, which marks a method as obsolete. Annotations can be used to influence the behavior of code, especially in frameworks like Spring or Hibernate.
+
+21. JavaScript Hoisting
+Question: What is hoisting in JavaScript?
+Answer: Hoisting is JavaScript’s default behavior of moving declarations to the top of the current scope (either global or function scope). This means that variables and functions can be used before they are declared. However, only the declarations are hoisted, not the initializations. This can sometimes lead to unexpected behavior if not properly understood.
+
+22. Java Serialization
+Question: What is serialization in Java, and when would you use it?
+Answer: Serialization in Java is the process of converting an object into a byte stream, enabling it to be easily saved to a file or sent over a network. Deserialization is the reverse process, reconstructing the object from the byte stream. Serialization is often used for deep cloning of objects, saving objects to disk, or sending objects between different JVMs.
+
+23. JavaScript Scoping
+Question: What are the different types of scoping in JavaScript?
+Answer: JavaScript has function scope and block scope. Variables declared with var are function-scoped, meaning they are accessible within the function they are declared in. Variables declared with let and const are block-scoped, meaning they are only accessible within the block (e.g., inside {}) they are declared in. This allows for more predictable and safer code, especially in loops.
+
+24. Java JDBC
+Question: How do you connect to a database using JDBC in Java?
+Answer: To connect to a database using JDBC, I first load the database driver using Class.forName("com.mysql.jdbc.Driver"), then establish a connection using DriverManager.getConnection(url, user, password). After that, I create a Statement or PreparedStatement object to execute SQL queries, and handle the results with a ResultSet object. Finally, I ensure that all resources (statements, connections) are properly closed to avoid leaks.
+
+25. Handling Asynchronous Errors in JavaScript
+Question: How do you handle errors in asynchronous JavaScript code?
+Answer: In asynchronous JavaScript, errors can be handled using the .catch() method when working with Promises. If using async/await, I can use a try/catch block to handle errors. This approach makes it easier to manage errors and provides a cleaner way to handle exceptions in asynchronous code.
